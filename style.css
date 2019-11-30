@@ -1,3 +1,13 @@
+.active {
+    color: #B3F2CD !important;  
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 body, html {
     padding: 0;
     margin: 0;
@@ -62,4 +72,30 @@ h3 {
 	z-index: 9999;
 	text-align: center;
 }
+
+#nav-bar a {
+    float: left;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+#nav-bar ul li {
+    display: inline-block;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: #D8FFFF;
+    border-radius: 2%
+}
+
 #formarea {text-align: center;}
