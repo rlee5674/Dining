@@ -1,0 +1,129 @@
+//Some Important notes:::
+//Do not confuse Key_Ing with Full or Steps.
+//Key_Ing will only include ingredients that change daily. These tend to be the 
+//the food items that are specifically mentioned. Key_Ing will not mention the items that are always 
+//in dining halls (ex: there is always  deli section so there is always cheese, jam, etc. 
+//There is always salad bar, so there is always cucumbers, tomatoes, lettuce, soy sauce, etc.). 
+//You use Key_Ing for sorting purposes so this is more for Janny's page. 
+//
+//Full is the full list of all the ingredients (including those that weren't listed in Menu_Ingredients
+//because we know they are always available but the dining menu API doesn't mention them). This is what is printed
+//on the screen when Camille does her recipe elaboration page
+//
+//Steps is how to create the dish. This should mostly only concern Camille.
+//RecNum is also for Camille. It's how many times someone recommends a recipe. Default is 0
+
+//Genre categories [TO START for now; can change later]: Breakfast, Lunch, Dinner, Dessert
+//Possibilities: Vegetarian, Desserts, Noodles, Sandwiches, Salads
+
+recipes = 
+[{
+	"Title": "Tzatziki Chicken Salad",
+	"Genre": "Lunch",
+	"Key_Ing": ["Grilled Hallal Chicken Breast"],
+	"Full": ["Grilled Hallal Chicken Breast","Greek Plain Yogurt","Cucumbers","Lemon Slice","Salt","Pepper"],
+	"RecNum": 0,
+	"Steps": ["1. Cut or shred the chicken into pieces", "2. Place the chicken and cucumbers into a bowl together", 
+		"3. Add a few spoonful of yogurt and squeeze one or two lemon slices", "4. Stir everything and sprinkle with sald and pepper",
+		"5. Enjoy by itself, on a sandwich, or throw in some pita chips."],
+	"Image": "https://1.bp.blogspot.com/-RYdPsWQ5wV0/WmdcBQYkCRI/AAAAAAAAkYc/rK2SLB45J8YfiutiMrdbgoRy2HP4n4SMgCLcBGAs/s640/Tzatziki-Chicken-Salad-Image%2B1.JPG",
+},
+{
+	"Title": "Pasta Primavera",
+	"Genre": "Dinner",
+	"Key_Ing": ["Broccoli"], 
+	"Full": ["Broccoli","Noodles","Carrots","Cheese", "Tomatoes", "Red Peppers"],
+	"RecNum": 0,
+	"Steps": ["1. Grab some plain pasta and place in a bowl", "2. Add broccoli, carrots, tomatoes, peppers and your choice of cheese",
+		"3. Drizzle with oil and some salt and pepper", "4. Mix and enjoy"],
+	"Image": "https://life-in-the-lofthouse.com/wp-content/uploads/2017/09/Creamy-Pasta-Primavera2.jpg",
+},
+{
+	"Title": "Fruity Quesadilla",
+	"Genre": "Breakfast",
+	"Key_Ing": ["Tortilla"],  //I think on dining API, it's called tortilla strips or flour tortillas??
+	//Am worried it might only be in Carm
+	"Full": ["Tortilla","Peanut Butter","Grapes","Banana"],
+	"RecNum": 0,
+	"Steps": ["1. Spread peanut butter on tortilla or flatbread", "2. Slice grapes and banana or use any other available fruits",
+		"3. Fold the tortilla in half and enjoy"],
+	"Image": "http://img.sndimg.com/food/image/upload/w_614,h_461,c_fit/v1/img/recipes/35/63/86/picbFwj98.jpg",
+},
+{
+	"Title": "Omelet Bagel",
+	"Genre": "Breakfast",
+	"Key_Ing": ["Omelet"], 
+	"Full": ["Omelet","Bagel","Spinach"],
+	"RecNum": 0,
+	"Steps": ["1. On one half of the bagel, place the omelet and a few pieces of spinach", "2. Sprinkle some salt and pepper",
+		"3. Top with the other bagel half and enjoy"],
+	"Image": "https://farm3.static.flickr.com/2517/4170920914_da3a5c17ba.jpg",
+},
+{
+	"Title": "Sloppy Joe",
+	"Genre": "Lunch",
+	"Key_Ing": ["Meatballs"],
+	"Full": ["Meatballs","Hamburger Bun", "Ketchup", "Sriracha", "Marinara Sauce"],
+	"RecNum": 0,
+	"Steps": ["1. In a bowl, mash 3-4 meatballs and a few spoonfuls of marinara sauce, ketchup, and sriracha with a fork",
+		"2. Spoon the meat onto a hamburger bun and enjoy"],
+	"Image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/4/7/0/NY0109_Spensers-Sloppy-Joes.jpg.rend.hgtvcom.826.620.suffix/1382538657743.jpeg",
+},
+{
+	"Title": "Ice Cream Sandwich",
+	"Genre": "Dessert",
+	"Key_Ing": ["Cookies"],
+	"Full": ["Cookies","Ice Cream"],
+	"RecNum": 0,
+	"Steps": ["1. Place ice cream onto one cookie and top with the second. You can use any kind of ice cream and any kind of cookie"],
+	"Image": "https://www.sprinklesforbreakfast.com/images/ice-cream-sandwichs-1.jpeg",
+},
+{
+	"Title": "Spinach Melt",
+	"Genre": "Lunch",
+	"Key_Ing": ["Spinach"],//or cream cheese?
+	"Full": ["Spinach","Bread", "Cheese", "Salt", "Pepper"],
+	"RecNum": 0,
+	"Steps": ["1. Using 1-2 slices of cheese or cream cheese spread, cover one slice of bread", "2. Stack the spinach on top of the cheese", 
+		"3. Add in other veggies like artichokes if you like", "4. Sprinkle some salt and pepper", 
+		"5. Top with another slice of bread and press the sandwich in the panini press until the cheese has melted or black grill marks appear"],
+	"Image": "http://4.bp.blogspot.com/-tmWGufNZts0/UWwYt2XZWhI/AAAAAAAABVo/ESR1rNa0DSk/s1600/SpinachArtichokeMelt1.jpg",
+},
+{
+	"Title": "Salmon on Greens",
+	"Genre": "Dinner",
+	"Key_Ing": ["Salmon"],
+	"Full": ["Salmon","Spinach", "Green & Red Peppers", "Tomatoes"],
+	"RecNum": 0,
+	"Steps": ["1. Plate the spinach, peppers, tomatoes and salmon in that order", 
+		"2. For more flavor, you could incorporate a base of mashed sweet potatoes or subsitute spinach with arugula"],
+	"Image": "https://www.everydayglutenfreegourmet.ca/wp-content/uploads/2018/04/Sesame-Salmon-on-Greens-1.jpg",
+},
+{
+	//Wanted to put this as a test case. So this recipe can be made any time, any day because Dewick always has 
+	//waffle mix, blueberry jam and they won't say whether they have bananas or not
+	//In this case, since this can be made any day regardless of the menu, this should show up every day. 
+	//So, maybe in filter @Janny, if " " is detected, print it always?
+	//Let me know how this works out
+	"Title": "Blueberry Banana Waffles",
+	"Genre": "Breakfast",
+	"Key_Ing": [" "],
+	"Full": ["Waffle Mix", "Blueberry Jam", "Bananas"],
+	"RecNum": 0,
+	"Steps": ["1. Pour the waffle mix into the waffle machine.", "2. Place small spoonfuls of blueberry jam through out the batter",
+		"3. Close the machine cover and follow the normal waffle-making instructions", 
+		"4. When the waffle is finished, plate with banana slices. You could add nutella or any other topping of choice"],
+	"Image": "http://4.bp.blogspot.com/-zXgpS1xa58g/T989UdCyaiI/AAAAAAAAAzw/2hOCQM9ET7w/s1600/blueberrybananawaffles0013.JPG",
+},
+{
+	"Title": "Fried Rice",
+	"Genre": "Dinner",
+	"Key_Ing": ["Rice"],//So this can be anything from VG Steamed White Rice, Organic Brown Basmatic Rice, 
+	//Chinese Sticky Rice or Jasmine Rice. Any of these 4
+	"Full": ["Rice","Carrots", "Broccoli", "Ham", "Soy Sauce"],
+	"RecNum": 0,
+	"Steps": ["1. Cut the carrots, broccoli and ham into smaller pieces", "2. Combine with rice in a bowl", 
+		"3. Drizzle some soy sauce and mix thoroughly together", "4. Additional toppings could be peas, eggs, mushrooms and more"],
+	"Image": "https://worldofcooking.net/wp-content/uploads/2019/07/Broccoli-with-Shrimps-and-Ham-Fried-Rice.jpg",
+},
+]
