@@ -107,7 +107,7 @@ recipes =
 	//Let me know how this works out
 	"Title": "Blueberry Banana Waffles",
 	"Genre": "Breakfast",
-	"Key_Ing": [" "],
+	"Key_Ing": [],
 	"Full": ["Waffle Mix", "Blueberry Jam", "Bananas"],
 	"RecNum": 0,
 	"Steps": ["1. Pour the waffle mix into the waffle machine.", "2. Place small spoonfuls of blueberry jam through out the batter",

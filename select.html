@@ -2,14 +2,15 @@
   <html>
     <head>
     <meta charset="utf-8">
-    <title>TOP 5 Website</title>
+    <title>Selection</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "5style.css" />
      <link rel = "stylesheet" type = "text/css" href = "style.css" />
+     <script type="text/javascript" src="recipes.json"></script>
+     <script type="text/javascript" src="display_categories.js"></script>
     </head>
-  <body>
 
-      <body onload="fill_navigation();">
+  <body onload="fill_navigation();">
     <header>
       <br>
       <h1> Dewick Dining Hacks </h1>
@@ -21,8 +22,27 @@
         </script>
       </div>
     </header>
+    <!-- SEARCH BAR -->
+    <div>
+      <form action="">
+        <input type="text" placeholder="Search" name="search">
+        <button type="submit" name="submit">Search</button>
+      </form>
+    </div>
 
-    <textarea></textarea><input type="button">Search</body>
+    <!-- DISPLAY CATEGORIES -->
+    <div>
+      <ul id="categories">
+        
+      </ul>
+    </div>
+
+    <!-- FILTER RECIPES -->
+    <div>
+
+    </div>
+
+
      <script type="text/javascript" src="nav_bar.js"></script>
 </body>
 </html>
