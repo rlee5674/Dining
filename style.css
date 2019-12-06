@@ -1,6 +1,6 @@
 .active {
-    color: #B3F2CD !important;  
-    font-weight: bold;
+    color: #4C0D32 !important;
+    font-weight: bold !important;
 }
 
 * {
@@ -14,40 +14,45 @@ body, html {
     box-sizing: border-box;
 }
 
+#mini-hero {
+   background-color:#230007;
+   color: #ffaf42;
+    background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
 body {
-	background-color: #D8FFFF;
+	background-color: #DCC7AA;
     margin: 0;
     align-content: center;
 }
 
 header {
+        position: sticky;
 	box-sizing: border-box;
-    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     display: block;
-    background-color: #4c0d32; 
     z-index: 9999;
-    text-align: center;
 }
 
 h1 {
     display: inline;
     font-size: 40px;
     font-weight: bolder;
-    color: #FFEBD8;
+    color: #ffaf42;
     width: 100%;
-    padding-top: 5vh;
     margin: 0;
 }
 
 h2 {
+    color: #000;
 	display: inline;
 	font-size: 25px;
 	font-weight: bold;
-	color: #000;
 	width: 100%;
 	padding-top: 5vh;
 	margin: 0; 
@@ -65,7 +70,7 @@ h3 {
 
 #nav-bar {
 	width: 100%; 
-	background-color: #4c0d32; 
+	background-color: #4C0D32;
 	color: #FFEBD8;
 	padding-top: 5px; 
 	padding-bottom: 5px; 
@@ -94,7 +99,7 @@ h3 {
     display: inline-block;
     padding-left: 1%;
     padding-right: 1%;
-    background-color: #D8FFFF;
+    background-color: #F3D8C7;
     border-radius: 2%
 }
 
