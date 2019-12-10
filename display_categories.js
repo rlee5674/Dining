@@ -1,7 +1,6 @@
 var categories = new Set();
 var ingredients = new Array();
 var todays_recipes = new Array();
-var str = "goat cheese baked polenta w/ mushrooms &amp; ricotta (v)";
 
 /* Create a set of all unique cateogories. */
 $(function() {
@@ -50,24 +49,45 @@ function display_recipes(rs) {
             
         // });
         img.bind('click', function() {
-            
+
         });
         $("#recipes").append(img);
     })
 }
 
 function strip_recipes() {
-    recipes.forEach(recipe => {
+    for (let r = 0; r < recipes.length; r++) {
+        var recipe = recipes[r];
         var key_ing = recipe["Key_Ing"];
         if (key_ing.length == 0) {
             todays_recipes.push(recipe);
+            continue;
         }
-        key_ing.forEach(i => {
-            if (ingredients.includes(i.toLowerCase())) {
-                todays_recipes.push(recipe);
+        var key_ing_bool = new Array(key_ing.length).fill(0);
+
+        for (let key = 0; key < key_ing.length; key++) {
+            console.log("key:" + key_ing[key].toLowerCase());
+            for (let ing = 0; ing < ingredients.length; ing++) {
+                if (ingredients[ing].includes(key_ing[key].toLowerCase()) || ingredients[ing] == key_ing[key].toLowerCase()) {
+                    key_ing_bool[key] = 1;
+                    break;
+                }
             }
-        });
-    });
+        }
+
+// key_ing.forEach((key, index) => {
+//             ingredients.forEach(ing => {
+//                 if (ing.includes(ing.toLowerCase())) {
+//                     key_ing_bool[index] = 1;
+//                     break;
+//                 }
+//             });
+//         });
+        console.log(key_ing_bool);
+        if (key_ing_bool.every(i => {return i == 1})) {
+            todays_recipes.push(recipe);
+        }
+    };
 }
 
 function req() {
@@ -88,11 +108,9 @@ function req() {
             var all = JSON.parse(result);
             var data = all["data"];
             /* TODO DONE: Find a way to iterate through all of the keys of JSON.
-             * TODO DONE: Store all of the food in a set.
              * TODO (time?): Find a way to filter through important food words.
              *               Ex: 'mini cheesecake' -> 'cheesecake'
              *               Ex: 'turkey breast' -> 'turkey'?
-             * TODO: Filter recipes according to what's available. 
              */
 
             for (var meal in data) {
