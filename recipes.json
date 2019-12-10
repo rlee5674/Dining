@@ -19,13 +19,11 @@
 recipes = 
 [{
 	"Title": "Tzatziki Chicken Salad",
-	"Genre": "Lunch",
-	"Key_Ing": ["Grilled Hallal Chicken Breast"],
+	"Genre": ["Lunch"],
+	"Key_Ing": "Grilled Hallal Chicken Breast",
 	"Full": ["Grilled Hallal Chicken Breast","Greek Plain Yogurt","Cucumbers","Lemon Slice","Salt","Pepper"],
 	"RecNum": 0,
-	"Steps": ["1. Cut or shred the chicken into pieces", "2. Place the chicken and cucumbers into a bowl together", 
-		"3. Add a few spoonful of yogurt and squeeze one or two lemon slices", "4. Stir everything and sprinkle with sald and pepper",
-		"5. Enjoy by itself, on a sandwich, or throw in some pita chips."],
+	"Steps": ["Cut or shred the chicken into pieces", "Place the chicken and cucumbers into a bowl together", "Add a few spoonful of yogurt and squeeze one or two lemon slices", "Stir everything and sprinkle with sald and pepper", "Enjoy by itself, on a sandwich, or throw in some pita chips."],
 	"Image": "https://1.bp.blogspot.com/-RYdPsWQ5wV0/WmdcBQYkCRI/AAAAAAAAkYc/rK2SLB45J8YfiutiMrdbgoRy2HP4n4SMgCLcBGAs/s640/Tzatziki-Chicken-Salad-Image%2B1.JPG",
 },
 {
@@ -34,8 +32,7 @@ recipes =
 	"Key_Ing": ["Broccoli"], 
 	"Full": ["Broccoli","Noodles","Carrots","Cheese", "Tomatoes", "Red Peppers"],
 	"RecNum": 0,
-	"Steps": ["1. Grab some plain pasta and place in a bowl", "2. Add broccoli, carrots, tomatoes, peppers and your choice of cheese",
-		"3. Drizzle with oil and some salt and pepper", "4. Mix and enjoy"],
+	"Steps": ["Grab some plain pasta and place in a bowl", "Add broccoli, carrots, tomatoes, peppers and your choice of cheese", "Drizzle with oil and some salt and pepper", "Mix and enjoy"],
 	"Image": "https://life-in-the-lofthouse.com/wp-content/uploads/2017/09/Creamy-Pasta-Primavera2.jpg",
 },
 {
@@ -45,8 +42,7 @@ recipes =
 	//Am worried it might only be in Carm
 	"Full": ["Tortilla","Peanut Butter","Grapes","Banana"],
 	"RecNum": 0,
-	"Steps": ["1. Spread peanut butter on tortilla or flatbread", "2. Slice grapes and banana or use any other available fruits",
-		"3. Fold the tortilla in half and enjoy"],
+	"Steps": ["Spread peanut butter on tortilla or flatbread", "2. Slice grapes and banana or use any other available fruits", "Fold the tortilla in half and enjoy"],
 	"Image": "http://img.sndimg.com/food/image/upload/w_614,h_461,c_fit/v1/img/recipes/35/63/86/picbFwj98.jpg",
 },
 {
@@ -55,8 +51,7 @@ recipes =
 	"Key_Ing": ["Omelet"], 
 	"Full": ["Omelet","Bagel","Spinach"],
 	"RecNum": 0,
-	"Steps": ["1. On one half of the bagel, place the omelet and a few pieces of spinach", "2. Sprinkle some salt and pepper",
-		"3. Top with the other bagel half and enjoy"],
+	"Steps": ["On one half of the bagel, place the omelet and a few pieces of spinach", "Sprinkle some salt and pepper", "Top with the other bagel half and enjoy"],
 	"Image": "https://farm3.static.flickr.com/2517/4170920914_da3a5c17ba.jpg",
 },
 {
@@ -65,8 +60,7 @@ recipes =
 	"Key_Ing": ["Meatballs"],
 	"Full": ["Meatballs","Hamburger Bun", "Ketchup", "Sriracha", "Marinara Sauce"],
 	"RecNum": 0,
-	"Steps": ["1. In a bowl, mash 3-4 meatballs and a few spoonfuls of marinara sauce, ketchup, and sriracha with a fork",
-		"2. Spoon the meat onto a hamburger bun and enjoy"],
+	"Steps": ["In a bowl, mash 3-4 meatballs and a few spoonfuls of marinara sauce, ketchup, and sriracha with a fork", "Spoon the meat onto a hamburger bun and enjoy"],
 	"Image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/4/7/0/NY0109_Spensers-Sloppy-Joes.jpg.rend.hgtvcom.826.620.suffix/1382538657743.jpeg",
 },
 {
@@ -75,7 +69,7 @@ recipes =
 	"Key_Ing": ["Cookies"],
 	"Full": ["Cookies","Ice Cream"],
 	"RecNum": 0,
-	"Steps": ["1. Place ice cream onto one cookie and top with the second. You can use any kind of ice cream and any kind of cookie"],
+	"Steps": ["Place ice cream onto one cookie and top with the second", "You can use any kind of ice cream and any kind of cookie"],
 	"Image": "https://www.sprinklesforbreakfast.com/images/ice-cream-sandwichs-1.jpeg",
 },
 {
@@ -84,9 +78,7 @@ recipes =
 	"Key_Ing": ["Spinach"],//or cream cheese?
 	"Full": ["Spinach","Bread", "Cheese", "Salt", "Pepper"],
 	"RecNum": 0,
-	"Steps": ["1. Using 1-2 slices of cheese or cream cheese spread, cover one slice of bread", "2. Stack the spinach on top of the cheese", 
-		"3. Add in other veggies like artichokes if you like", "4. Sprinkle some salt and pepper", 
-		"5. Top with another slice of bread and press the sandwich in the panini press until the cheese has melted or black grill marks appear"],
+	"Steps": ["Cover one slice of bread with either cream cheese spread or 1-2 slices of cheese", "Stack the spinach on top of the cheese", "Add in other veggies like artichokes if you like", "Sprinkle some salt and pepper", "Top with another slice of bread and press the sandwich in the panini press until the cheese has melted or black grill marks appear"],
 	"Image": "http://4.bp.blogspot.com/-tmWGufNZts0/UWwYt2XZWhI/AAAAAAAABVo/ESR1rNa0DSk/s1600/SpinachArtichokeMelt1.jpg",
 },
 {
@@ -95,8 +87,7 @@ recipes =
 	"Key_Ing": ["Salmon"],
 	"Full": ["Salmon","Spinach", "Green & Red Peppers", "Tomatoes"],
 	"RecNum": 0,
-	"Steps": ["1. Plate the spinach, peppers, tomatoes and salmon in that order", 
-		"2. For more flavor, you could incorporate a base of mashed sweet potatoes or subsitute spinach with arugula"],
+	"Steps": ["Plate the spinach, peppers, tomatoes and salmon in that order", "For more flavor, you could incorporate a base of mashed sweet potatoes or subsitute spinach with arugula"],
 	"Image": "https://www.everydayglutenfreegourmet.ca/wp-content/uploads/2018/04/Sesame-Salmon-on-Greens-1.jpg",
 },
 {
@@ -107,12 +98,10 @@ recipes =
 	//Let me know how this works out
 	"Title": "Blueberry Banana Waffles",
 	"Genre": "Breakfast",
-	"Key_Ing": [],
+	"Key_Ing": [], //or you could use "Banana" if it's not working out
 	"Full": ["Waffle Mix", "Blueberry Jam", "Bananas"],
 	"RecNum": 0,
-	"Steps": ["1. Pour the waffle mix into the waffle machine.", "2. Place small spoonfuls of blueberry jam through out the batter",
-		"3. Close the machine cover and follow the normal waffle-making instructions", 
-		"4. When the waffle is finished, plate with banana slices. You could add nutella or any other topping of choice"],
+	"Steps": ["Pour the waffle mix into the waffle machine.", "Place small spoonfuls of blueberry jam through out the batter", "Close the machine cover and follow the normal waffle-making instructions", "When the waffle is finished, plate with banana slices. You could add nutella or any other topping of choice"],
 	"Image": "http://4.bp.blogspot.com/-zXgpS1xa58g/T989UdCyaiI/AAAAAAAAAzw/2hOCQM9ET7w/s1600/blueberrybananawaffles0013.JPG",
 },
 {
@@ -120,10 +109,45 @@ recipes =
 	"Genre": "Dinner",
 	"Key_Ing": ["Rice"],//So this can be anything from VG Steamed White Rice, Organic Brown Basmatic Rice, 
 	//Chinese Sticky Rice or Jasmine Rice. Any of these 4
-	"Full": ["Rice","Carrots", "Broccoli", "Ham", "Soy Sauce"],
+	"Full": ["Rice","Carrots", "Broccoli", "Soy Sauce"],
 	"RecNum": 0,
-	"Steps": ["1. Cut the carrots, broccoli and ham into smaller pieces", "2. Combine with rice in a bowl", 
-		"3. Drizzle some soy sauce and mix thoroughly together", "4. Additional toppings could be peas, eggs, mushrooms and more"],
+	"Steps": ["Cut the carrots and broccoli into smaller pieces", "Combine with rice in a bowl", "Drizzle some soy sauce and mix thoroughly together", "Additional toppings could be peas, eggs, mushrooms and more"],
 	"Image": "https://worldofcooking.net/wp-content/uploads/2019/07/Broccoli-with-Shrimps-and-Ham-Fried-Rice.jpg",
+},
+{
+	"Title": "BLT Salad",
+	"Genre": "Lunch",
+	"Key_Ing": ["Bacon"],
+	"Full": ["Bacon","Lettuce", "Tomatoes", "Corn"],
+	"RecNum": 0,
+	"Steps": ["Combine lettuce, tomatoes and corn together in a bowl", "Crumble or place a few slices of bacon on top", "Add your choice of dressing and top with croutins if you want some extra crunch"],
+	"Image": "https://1.bp.blogspot.com/-vT72aLW639M/UbpSustZFcI/AAAAAAAALUE/y-8otHErATo/s1600/DSC_8851.JPG",
+},
+{
+	"Title": "Krispy Banana Napoleon",
+	"Genre": "Dessert",
+	"Key_Ing": ["Rice Krispies"],
+	"Full": ["Rice Krispies","Banana", "Ice Cream"],
+	"RecNum": 0,
+	"Steps": ["Slice half a banana into pieces", "Layer the banana slices between two rice krispies with some on top", "Cover with ice cream or have the ice cream on the side"],
+	"Image": "http://college.biggirlssmallkitchen.com/wp-content/uploads/2012/06/rice-krispies-napoleon.jpg",
+},
+{
+	"Title": "Soft Serve Affogato",
+	"Genre": "Dessert",
+	"Key_Ing": ["Sprinkles"],
+	"Full": ["Sprinkles","Ice Cream", "Coffee"],
+	"RecNum": 0,
+	"Steps": ["Put ice cream in a mug", "Pour coffee inside and place another layer of ice cream on top", "Add the sprinkles or any other available topping of your choice"],
+	"Image": "https://farm8.staticflickr.com/7318/12847882304_a94f3fc0b2_z.jpg",
+},
+{
+	"Title": "Broccoli Rabe Pasta Salad",
+	"Genre": "Dinner",
+	"Key_Ing": ["Rabe"],
+	"Full": ["Rabe","Pasta", "Carrots", "Soy Sauce"],
+	"RecNum": 0,
+	"Steps": ["Combine the broccoli rabe with the carrots and pasta. Penne is best but any kind of pasta will also do", "Drizzle the soy sauce and mix.", "For an extra kick, add some red pepper flakes or shredded fish (ex: tuna)"],
+	"Image": "https://farm5.static.flickr.com/4056/4356576691_c278e5140f.jpg",
 },
 ]
