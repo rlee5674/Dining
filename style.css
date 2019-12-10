@@ -40,7 +40,6 @@ header {
 }
 
 h1 {
-    display: inline;
     font-size: 40px;
     font-weight: bolder;
     color: #ffaf42;
@@ -66,6 +65,12 @@ h3 {
 	width: 100%;
 	padding-top: 5vh;
 	margin:0;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+    /*margin: -75px 0 0 -100px;*/
 }
 
 #nav-bar {

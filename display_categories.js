@@ -42,12 +42,8 @@ function display_recipes(rs) {
         var name = recipe.Title;
         // var r = $('<div id="' + name + '" class="recipe"><p>' + name + '</p></div>');
         var img = $('<img src="' + recipe.Image + '" class="recipe">');
-        // r.append(img);
-        // img.bind('mouseover', function() {
-            
-        // });
         img.bind('click', function() {
-
+            article_recipe_display(i, rs);
         });
         $("#recipes").append(img);
     })
@@ -113,3 +109,44 @@ function req() {
     });
     request.send();
 }
+
+function article_recipe_display(i, data) {
+    // clear space first!!!
+    $("#Goback").show();
+    $("#container").empty();
+    $("#container").show();
+    $("#prev_container").hide();
+    var container = document.getElementById("container");
+    console.log(data[i].Title);
+    var top_info = document.createElement("DIV");
+    top_info.innerHTML = "<h1>"+data[i].Title+"</h1>";
+    top_info.innerHTML += "<img src="+data[i].Image+ ">";
+
+    var bottom = document.createElement("DIV");
+    bottom.innerHTML = "<h2>Ingredients</h2>";
+    var ingred = document.createElement("ul");
+    // console.log(data[i].Full.length);
+    for (j=0; j<data[i].Full.length; j++) {
+        var li = document.createElement('li');
+        li.innerHTML = data[i].Full[j];
+        ingred.appendChild(li);
+    }
+    bottom.appendChild(ingred);
+    bottom.innerHTML += "<h2>Directions</h2>";
+    var dirs = document.createElement("ol");
+    dirs.setAttribute("id", "direct");
+    // modify CSS direct id
+    for (j=0; j<data[i].Steps.length; j++) {
+        var li = document.createElement('li');
+        li.innerHTML = data[i].Steps[j];
+        dirs.appendChild(li);
+    }
+    bottom.appendChild(dirs);
+    container.appendChild(top_info);
+    container.appendChild(bottom);
+}
+function gobackpage() {
+    $("#container").hide();
+    $("#prev_container").show();
+    $("#Goback").hide();
+};

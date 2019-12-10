@@ -18,6 +18,7 @@
         <script type="text/javascript" style = "display: inline">
           $(document).ready(function() {
             $("#nav-bar li a").eq(1).addClass("active");
+            $("#Goback").hide(); //added in Camille
           });
         </script>
       </div>
@@ -30,16 +31,24 @@
       </form>
     </div>
 
-    <!-- DISPLAY CATEGORIES -->
-    <div>
-      <ul id="categories">
-        
-      </ul>
+    <!-- displays recipe after hiding the previous container -->
+    <button type="button" id="Goback" onclick="gobackpage()">Go back</button>
+    <div id="container">
+      <!-- attach to go back to original display -->  
     </div>
+    <div id="prev_container">
+      <!-- DISPLAY CATEGORIES -->
+      <div>
+        <ul id="categories">
+          
+        </ul>
+      </div>
 
-    <!-- FILTER RECIPES -->
-    <div>
-      <div id="recipes"></div>
+      <!-- FILTER RECIPES -->
+      <div>
+        <div id="recipes"></div>
+      </div>
+      
     </div>
 
 
