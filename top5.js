@@ -11,31 +11,19 @@ var lineup;
 			request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			request.onreadystatechange = function() {
 				if (request.readyState == 4 && request.status == 200) {
-					console.log("1");
 					result = request.responseText;
-					console.log("2");
-					console.log("3");
 					recipes = JSON.parse(result);
-					console.log("4");
 					var parsemen = parseJSON(recipes);
 						//printJSON(parsemen);
-					console.log("5");
 					HideHover();
-					console.log("6");
 					reDirect();
-					console.log("7");
 					ShowHoversWhen();
-					console.log("8");
 					lineup = new Array;
-					console.log("9");
 					lineup = chef_lineup(recipes);
-					console.log("10");
 					for (i = 0; i<lineup.length;i++) {
-						console.log("for");
 						$("#c" + i).append(lineup[i].linked);
 						$(lineup[i].linked).attr('id', 'f' + i);
 					}
-					console.log("11");
 				}
 			};
 		request.send();
