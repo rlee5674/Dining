@@ -16,14 +16,12 @@ $(document).ready(function() {
         console.log(cat);
         var c = $('<li id="' + cat + '" class="category">' + cat + '</li>');
         c.bind('click', function() {
-            console.log(todays_recipes);
             var f_recipes = filter_recipes(cat);
             display_recipes(f_recipes);
         });
         $("#categories").append(c);
     });
-    /* TODO: Filter throug recipes based off of what's avaiable. */
-    /* Display all recipes on page */
+
     req();
     
 });
@@ -66,7 +64,6 @@ function strip_recipes() {
         var key_ing_bool = new Array(key_ing.length).fill(0);
 
         for (let key = 0; key < key_ing.length; key++) {
-            console.log("key:" + key_ing[key].toLowerCase());
             for (let ing = 0; ing < ingredients.length; ing++) {
                 if (ingredients[ing].includes(key_ing[key].toLowerCase()) || ingredients[ing] == key_ing[key].toLowerCase()) {
                     key_ing_bool[key] = 1;
@@ -74,16 +71,6 @@ function strip_recipes() {
                 }
             }
         }
-
-// key_ing.forEach((key, index) => {
-//             ingredients.forEach(ing => {
-//                 if (ing.includes(ing.toLowerCase())) {
-//                     key_ing_bool[index] = 1;
-//                     break;
-//                 }
-//             });
-//         });
-        console.log(key_ing_bool);
         if (key_ing_bool.every(i => {return i == 1})) {
             todays_recipes.push(recipe);
         }
