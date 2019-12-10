@@ -99,3 +99,25 @@ h3 {
 }
 
 #formarea {text-align: center;}
+
+.recipe {
+    display: block;
+    border-width: 2px;
+    padding: 0 .5%;
+    margin: 0 0.2%;
+    border-style: dashed;
+    border-color: #1e1e1e;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipe * {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
