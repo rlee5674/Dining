@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title>TOP 5 Website</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel = "stylesheet" type = "text/css" href = "5style.css" />
      <link rel = "stylesheet" type = "text/css" href = "style.css" />
+         <link rel = "stylesheet" type = "text/css" href = "5style.css" />
     </head>
   <body>
 
       <body onload="fill_navigation();">
     <header>
-      <br>
-      <h1> Dewick Dining Hacks </h1>
+      <div id="mini-hero">
+      <h2 id="mini-hero">Dewick Dining Hacks</h2>
+    </div>
       <div id="nav-bar">
         <script type="text/javascript" style = "display: inline">
           $(document).ready(function() {
@@ -20,10 +21,22 @@
           });
         </script>
       </div>
-    </header>
+   </header>
+      <div id="hero">
+        <div id="hero-text">
+          <br/><br/><br/><br/><br/><br/>
+        <h1> Dewick Dining Hacks </h1><br/>
+        <h2 id="subtitle">Campus dining won't feel drab ever again!</h2><br/><br/>
+        <a id="continue" href="#content">Get Started</a>
+        </div>
+      </div>
+ 
 
-    <h2>Purpose</h2>
-    <p>Immanuel Kant was an influential Prussian German philosopher in the Age of Enlightenment. In his doctrine of transcendental idealism, he argued that space, time, and causation are mere sensibilities; "things-in-themselves" exist, but their nature is unknowable.</p>
+<div id="content">
+    <h2>Our Mission</h2>
+    <p> Want something fun, new and interesting to eat without needing to go off campus or pay extra? <br />
+  Dewick Dining Hacks is a student-run app that showcases various mouth-watering food concoctions that can be made using the ingredients found in Dewick. Different recipes are made available to you depending on what Dewick serves that day and new ones are added every week. 
+  </p>
      <h2>Top 5</h2>
      <div id = "top5">
 
@@ -35,6 +48,7 @@
           <div class="column"><div id="c4"><div id="over4"></div></div></div>
     </div>
     </div>
+  </div>
     <script type="text/javascript" src="top5.js"></script>
      <script type="text/javascript" src="nav_bar.js"></script>
 </body>

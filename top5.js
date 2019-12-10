@@ -1,5 +1,4 @@
 
-
 /*JSON DATA------------------------*/
 var recipes = [
 {
@@ -154,43 +153,46 @@ $("img").click(function(){
 });
 /*HOVER COMMMANDS*/
 		$(document).ready(function(){
-		
-			$("#c0").mouseenter(function(){
-   						 $("#over"+0).show();
-						$("#over"+0).html("Name: " + lineup[0].name);
-						setTimeout(function(){
- 							 $("#over"+0).hide();
- 							}, 2000);
-						});
-
-			$("#c1").mouseenter(function(){
-   						 $("#over"+1).show();
-						$("#over"+1).html("Name: " + lineup[1].name);
-						setTimeout(function(){
- 							 $("#over"+1).hide();
- 							}, 2000);
-						});
-			$("#c2").mouseenter(function(){
-   						 $("#over"+2).show();
-						$("#over"+2).html("Name: " + lineup[2].name);
-						setTimeout(function(){
- 							 $("#over"+2).hide();
- 							}, 2000);
-						});
-			$("#c3").mouseenter(function(){
-   						 $("#over"+3).show();
-						$("#over"+3).html("Name: " + lineup[3].name);
-						setTimeout(function(){
- 							 $("#over"+3).hide();
- 							}, 2000);
-						});
-			$("#c4").mouseenter(function(){
-   						 $("#over"+4).show();
-						$("#over"+4).html("Name: " + lineup[4].name);
-						setTimeout(function(){
- 							 $("#over"+4).hide();
- 							}, 2000);
-						});
+				$( "#c0" ).hover(
+					  function() {
+					   $("#over"+0).show();
+						$("#over"+0).html(lineup[0].name);
+					  }, function() {
+							$("#over"+0).hide();
+					  }
+				);
+				$( "#c1" ).hover(
+					  function() {
+					   $("#over"+1).show();
+						$("#over"+1).html(lineup[1].name);
+					  }, function() {
+							$("#over"+1).hide();
+					  }
+				);
+				$( "#c2" ).hover(
+					  function() {
+					   $("#over"+2).show();
+						$("#over"+2).html(lineup[2].name);
+					  }, function() {
+							$("#over"+2).hide();
+					  }
+				);
+				$( "#c3" ).hover(
+					  function() {
+					   $("#over"+3).show();
+						$("#over"+3).html(lineup[3].name);
+					  }, function() {
+							$("#over"+3).hide();
+					  }
+				);
+				$( "#c4" ).hover(
+					  function() {
+					   $("#over"+4).show();
+						$("#over"+4).html(lineup[4].name);
+					  }, function() {
+							$("#over"+4).hide();
+					  }
+				);
 
 			
 
@@ -231,7 +233,7 @@ function chef (meal) {
 /*PRINT OUT IMAGES OF PARSED JSON ON PAGE*/
 function printJSON (recipes) {
 		for (i =0; i <parsemen.length; i++) {
-			 document.getElementById('top5').innerHTML +=   parsemen[i].Title;
+
 			
 	}
 }
