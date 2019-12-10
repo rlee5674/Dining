@@ -20,7 +20,7 @@ recipes =
 [{
 	"Title": "Tzatziki Chicken Salad",
 	"Genre": ["Lunch"],
-	"Key_Ing": "Grilled Hallal Chicken Breast",
+	"Key_Ing": ["Grilled Hallal Chicken Breast"],
 	"Full": ["Grilled Hallal Chicken Breast","Greek Plain Yogurt","Cucumbers","Lemon Slice","Salt","Pepper"],
 	"RecNum": 0,
 	"Steps": ["Cut or shred the chicken into pieces", "Place the chicken and cucumbers into a bowl together", "Add a few spoonful of yogurt and squeeze one or two lemon slices", "Stir everything and sprinkle with sald and pepper", "Enjoy by itself, on a sandwich, or throw in some pita chips."],
