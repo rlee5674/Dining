@@ -14,17 +14,15 @@ var lineup;
 					recipes = JSON.parse(result);
 					var parsemen = parseJSON(recipes);
 						//ANY FUNCTIONS U WANT TO CALL SHOULD GO HERE
-					lineup = chef_lineup(recipes);
-					for (i = 0; i<lineup.length;i++) {
-						$("#c" + i).append(lineup[i].linked);
-						$(lineup[i].linked).attr('id', 'f' + i);
+					//PARSE JSON DATA FOR U TO USE I DID THIS WITH CHEF LINEUP IN MY FILE, but u can do however
+					//at this point all the json is stored in recipes
 					}
 				}
 			};
 		request.send();
 	}	
 
-/*LOOP TO DISPLAY IMAGE ELEMENTS*/
+/*CALL THE MAIN SWAN SONG FUNCTION WHEN THE DOC IS READY*/
 		$(document).ready(function(){
 		Swan_Song();
  
@@ -51,39 +49,6 @@ function parseJSON (recipes) {
 			 parsemen[i] = JSON.parse(stringjon[i])
 	}
 	return parsemen;
-}
-/*CREATE FOOD ARRAY*/
-function chef_lineup(recipes){
-	var mlineup = new Array;
-	console.log(recipes);
-	for (i=0;i<recipes.length;i++){
-			console.log(recipes[i].Title);
-			mlineup[i] = chef(recipes[i]);
-	}
-
-	return mlineup;
-}
-
-/*CREATE FOOD OBJECTS FROM JSON Element*/
-function chef (meal) {
-			var meal = new Food(meal.Title, meal.Image);
-			return meal;
-			
-}
-
-/*STRINGING JSON DATA*/
-function setstringer(jonset) {
-    var strungarr = new Array
-    for(i = 0; i < jonset.length; i++) {
-    	strungarr[i] = JSON.stringify(jonset[i]);
- 
-	}
-	return strungarr;
-}
-
-/*MAKE PICTURE FUNCTION*/
-		function make_pic (linked) {
-			var canvas = new Image();
-			canvas.src = linked;
-			return canvas;
-		}
+	
+	
+	
