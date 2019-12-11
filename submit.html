@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Recipe</title>
+
+    <!-- Include JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./nav_bar.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<!--INTERNAL STYLESHEET!-->
+	<style>
+		input{width: 300px;}
+		select{width: 300px;}
+		textarea{width: 300px;}
+	</style>
+</head>
+<body>
+	<body onload="fill_navigation();">
+		<header>
+			<div id=mini-hero>
+			<h2 id="mini-hero">Dewick Dining Hacks</h2>
+		</div>
+			<div id="nav-bar">
+				<script type="text/javascript" style = "display: inline">
+					$(document).ready(function() {
+						$("#nav-bar li a").eq(2).addClass("active");
+					});
+				</script>
+			</div>
+		</header>
+
+		<div id = "Page_Title" style = "text-align: center">
+			<br>
+			<h2> Submit a Recipe </h2>
+		</div>
+		<br>
+		<div id = "Instructions" style = "text-align: center">
+			<h3> Do you have a great idea for a dining hack? </h3>
+			<h3> Send your idea to us and we'll post it here! </h3>
+		</div>
+		<br>
+
+		<!--Submission Page!------------------------------------------------------------>
+		<div id="formarea">
+			<form id="form">
+				<div id = "Rec_Title">
+					<input type="Title" id="Name" placeholder="Recipe Title"/>
+				</div>
+				<br>
+				<div id = "Rec_Genre">
+					<select id="Dropdown">
+						<option value="Genre" disabled selected>Choose a Genre</option>
+						<option value="Breakfast">Breakfast</option>
+						<option value="Lunch">Lunch</option>
+						<option value="Dinner">Dinner</option>
+						<option value="Dessert">Dessert</option>
+					</select>
+				</div>
+				<br>
+				<div id = "Key_Ing">
+					<input type="Key Ingredient" id = "Key" placeholder="The Key Ingredient"/>
+				</div>
+				<br>
+				<div id = "Rec_Ing">
+					<input type="Ingredients" id="Ing" placeholder="Other Recipe Ingredients Separated by Comma"/>
+				</div>
+				<br>
+				<div id = "Rec_Step">
+					<textarea id="Recipe" placeholder="How-to-Make Instructions Separated by Commas" style="height:150px"></textarea>
+				</div>
+				<br>
+				<div id = "Icon">
+					<input type="Pic" id="Image" placeholder="Image Url of Recipe">
+				</div>
+				<br>
+				<div id = "buttoflex">
+					<input type="button" id="submit" value="Submit Recipe" onclick="getVal();"/>
+				</div>
+			</form>
+		</div>
+
+		<script type="text/javascript">
+			function getVal() {
+				var title = document.getElementById("Name").value;
+				console.log(title);
+				var genre = document.getElementById("Dropdown").value;
+				console.log(genre);
+				var key = document.getElementById("Key").value;
+				console.log(key);
+				var ing = document.getElementById("Ing").value;
+				console.log(ing);
+				var steps = document.getElementById("Recipe").value;
+				console.log(steps);
+				var url = document.getElementById("Image").value;
+				console.log(url);
+
+				request = new XMLHttpRequest();
+				request.open("POST", "https://aqueous-castle-05363.herokuapp.com/putrecipes", true);
+				request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				request.send("title=" +title+ "&genre=" +genre+ "&key_ing=" +key+ "&full" +ing+ "&steps" +steps+ "&image" +url);
+		}
+		</script>
+</body>
+
+</html>
