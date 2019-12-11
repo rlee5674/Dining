@@ -18,10 +18,20 @@
         <script type="text/javascript" style = "display: inline">
           $(document).ready(function() {
             $("#nav-bar li a").eq(0).addClass("active");
+            $("#Goback").hide(); //added in Camille
           });
         </script>
       </div>
    </header>
+
+     <button type="button" id="Goback" onclick="gobackpage()">Go back</button>
+    <div id="container">
+      <!-- attach to go back to original display -->  
+    </div>
+
+
+<!--ORIGInAL PAGE-->
+    <div id="prev_container">
       <div id="hero">
         <div id="hero-text">
           <br/><br/><br/><br/><br/><br/>
@@ -49,6 +59,8 @@
     </div>
     </div>
   </div>
+
+</div>
     <script type="text/javascript" src="top5.js"></script>
      <script type="text/javascript" src="nav_bar.js"></script>
 </body>
