@@ -1,16 +1,11 @@
 var categories = new Set();
 var ingredients = new Array();
 var todays_recipes = new Array();
-
-/* Create a set of all unique cateogories. */
-$(function() {
-    $.each(recipes, function(i, recipe) {
-        categories.add(recipe.Genre);
-    });
-});
-
+var recipes = new Array();
 
 $(document).ready(function() {
+    get_all_recipes();
+
     /* Display categories on page */
     categories.forEach(function(i, cat) {
         console.log(cat);
@@ -25,6 +20,23 @@ $(document).ready(function() {
     req();
     
 });
+
+function get_all_recipes() {
+    var request = new XMLHttpRequest();
+    request.open("GET", "https://aqueous-castle-05363.herokuapp.com/getrecipes", false);
+    request.addEventListener("readystatechange", function () {
+        if (request.readyState == 4 && request.status == 200) {
+            var result = request.responseText;
+            recipes = JSON.parse(result);
+            recipes.forEach(recipe => {
+                if (recipe.hasOwnProperty("Genre")) {
+                    categories.add(recipe["Genre"]);
+                }
+            });
+        }
+    });
+    request.send();
+}
 
 /* For filtering through recipes by genre. */
 function filter_recipes(genre) {
@@ -52,7 +64,12 @@ function display_recipes(rs) {
 function strip_recipes() {
     for (let r = 0; r < recipes.length; r++) {
         var recipe = recipes[r];
+        console.log(r + " " + recipe['Key_Ing']);
+        if(!recipe.hasOwnProperty('Key_Ing')) {
+            continue;
+        }
         var key_ing = recipe["Key_Ing"];
+
         if (key_ing.length == 0) {
             todays_recipes.push(recipe);
             continue;
@@ -90,11 +107,6 @@ function req() {
             var result = request.responseText;
             var all = JSON.parse(result);
             var data = all["data"];
-            /* TODO DONE: Find a way to iterate through all of the keys of JSON.
-             * TODO (time?): Find a way to filter through important food words.
-             *               Ex: 'mini cheesecake' -> 'cheesecake'
-             *               Ex: 'turkey breast' -> 'turkey'?
-             */
 
             for (var meal in data) {
                 for (var key in data[meal]) {
