@@ -12,11 +12,13 @@ var lineup;
 			request.onreadystatechange = function() {
 				if (request.readyState == 4 && request.status == 200) {
 					result = request.responseText;
+					var all = JSON.parse(result);
+            		var data = all["data"];
 					recipes = JSON.parse(result);
 					var parsemen = parseJSON(recipes);
 						//printJSON(parsemen);
 					HideHover();
-					reDirect();
+					
 					ShowHoversWhen();
 					lineup = new Array;
 					lineup = chef_lineup(recipes);
@@ -24,10 +26,14 @@ var lineup;
 						$("#c" + i).append(lineup[i].linked);
 						$(lineup[i].linked).attr('id', 'f' + i);
 					}
+					reDirect(recipes);
 				}
 			};
 		request.send();
 	}	
+
+
+
 
 /*LOOP TO DISPLAY IMAGE ELEMENTS*/
 		$(document).ready(function(){
@@ -60,11 +66,25 @@ var Food = function(name, linked) {
 		}
 		}
 /*CLICK COMMANDS FOR REDIRECTING TO NEW PAGE*/
-function reDirect(){
-$("img").click(function(){
-   window.location.replace("https://cponline.pw/");
+function reDirect(rs){
+
+	$("#c0").click(function(){
+   article_recipe_display(0, rs);
+});
+	$("#c1").click(function(){
+    article_recipe_display(1, rs);
+});
+	$("#c2").click(function(){
+    article_recipe_display(2, rs);
+});
+	$("#c3").click(function(){
+   article_recipe_display(3, rs);
+});
+	$("#c4").click(function(){
+   article_recipe_display(4, rs);
 })
 }
+
 
 /*HOVER COMMMANDS*/
 		function ShowHoversWhen(){
@@ -163,3 +183,43 @@ function setstringer(jonset) {
 			canvas.src = linked;
 			return canvas;
 		}
+function article_recipe_display(i, data) {
+    // clear space first!!!
+    $("#Goback").show();
+    $("#container").empty();
+    $("#container").show();
+    $("#prev_container").hide();
+    var container = document.getElementById("container");
+    console.log(data[i].Title);
+    var top_info = document.createElement("DIV");
+    top_info.innerHTML = "<h1>"+data[i].Title+"</h1>";
+    top_info.innerHTML += "<img src="+data[i].Image+ ">";
+
+    var bottom = document.createElement("DIV");
+    bottom.innerHTML = "<h2>Ingredients</h2>";
+    var ingred = document.createElement("ul");
+    // console.log(data[i].Full.length);
+    for (j=0; j<data[i].Full.length; j++) {
+        var li = document.createElement('li');
+        li.innerHTML = data[i].Full[j];
+        ingred.appendChild(li);
+    }
+    bottom.appendChild(ingred);
+    bottom.innerHTML += "<h2>Directions</h2>";
+    var dirs = document.createElement("ol");
+    dirs.setAttribute("id", "direct");
+    // modify CSS direct id
+    for (j=0; j<data[i].Steps.length; j++) {
+        var li = document.createElement('li');
+        li.innerHTML = data[i].Steps[j];
+        dirs.appendChild(li);
+    }
+    bottom.appendChild(dirs);
+    container.appendChild(top_info);
+    container.appendChild(bottom);
+}
+function gobackpage() {
+    $("#container").hide();
+    $("#prev_container").show();
+    $("#Goback").hide();
+}
