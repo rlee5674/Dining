@@ -1,4 +1,4 @@
-var categories = new Set();
+var categories = ["Breakfast", "Lunch", "Dinner", "Dessert"];
 var ingredients = new Array();
 var todays_recipes = new Array();
 var recipes = new Array();
@@ -8,10 +8,10 @@ $(document).ready(function() {
 
     /* Display categories on page */
     categories.forEach(function(i, cat) {
-        console.log(cat);
-        var c = $('<li id="' + cat + '" class="category">' + cat + '</li>');
+        console.log(i);
+        var c = $('<li id="' + i + '" class="category">' + i + '</li>');
         c.bind('click', function() {
-            var f_recipes = filter_recipes(cat);
+            var f_recipes = filter_recipes(i);
             display_recipes(f_recipes);
         });
         $("#categories").append(c);
@@ -28,11 +28,11 @@ function get_all_recipes() {
         if (request.readyState == 4 && request.status == 200) {
             var result = request.responseText;
             recipes = JSON.parse(result);
-            recipes.forEach(recipe => {
-                if (recipe.hasOwnProperty("Genre")) {
-                    categories.add(recipe["Genre"]);
-                }
-            });
+            // recipes.forEach(recipe => {
+            //     if (recipe.hasOwnProperty("Genre")) {
+            //         categories.add(recipe["Genre"]);
+            //     }
+            // });
         }
     });
     request.send();
