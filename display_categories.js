@@ -132,6 +132,8 @@ function article_recipe_display(i, data) {
     console.log(data[i].Title);
     var top_info = document.createElement("DIV");
     top_info.innerHTML = "<h1>"+data[i].Title+"</h1>";
+    top_info.innerHTML += "<h2> Recommendation Score: " +data[i].RecNum+"</h2>";
+    top_info.innerHTML += "</br>";
     top_info.innerHTML += "<img src="+data[i].Image+ ">";
 
     var bottom = document.createElement("DIV");
