@@ -7,15 +7,15 @@
     <!-- Include JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="./nav_bar.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Hind&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 	<!--INTERNAL STYLESHEET!-->
 	<style>
-		input{width: 300px;}
-		select{width: 300px;}
-		textarea{width: 300px;}
+		input{width: 600px;}
+		select{width: 600px;}
+		textarea{width: 600px;}
 	</style>
 </head>
-<body>
 	<body onload="fill_navigation();">
 		<header>
 			<div id=mini-hero>
@@ -32,12 +32,11 @@
 
 		<div id = "Page_Title" style = "text-align: center">
 			<br>
-			<h2> Submit a Recipe </h2>
+			<h2 id="submit-title"> Submit a Recipe </h2>
 		</div>
 		<br>
-		<div id = "Instructions" style = "text-align: center">
-			<h3> Do you have a great idea for a dining hack? </h3>
-			<h3> Send your idea to us and we'll post it here! </h3>
+		<div id = "Instructions">
+			<h3 id="prompt"> Do you have a great idea for a dining hack? Send your idea to us and we'll post it here! </h3>
 		</div>
 		<br>
 
