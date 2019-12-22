@@ -7,13 +7,28 @@
     box-sizing: border-box;
     font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+#submit-title{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h3{
+ font-size: 60px;   
+}
 
 body, html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
+#Instructions{
+    font-family: 'Barlow Condensed', sans-serif;
+    align-content: center;
+    text-align: center;
+}
+#prompt{
+    font-size: 20px;
+    font-family: 'Hind', sans-serif;
+}
 #mini-hero {
    background-color:#230007;
    color: #ffaf42;
@@ -29,7 +44,7 @@ body {
 }
 
 header {
-        position: sticky;
+    position: sticky;
 	box-sizing: border-box;
     top: 0;
     left: 0;
@@ -108,7 +123,9 @@ img {
     border-radius: 2%
 }
 
-#formarea {text-align: center;}
+#formarea {
+    text-align: center;
+}
 
 .recipe {
     display: block;
@@ -170,4 +187,28 @@ img {
     color: black;
 }
 
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
