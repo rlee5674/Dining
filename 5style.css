@@ -106,6 +106,7 @@ h2{
     color: #ffaf42;
     padding: 15px;
     background-color: #4c0d32; 
+  font-family: 'Hind', sans-serif;
 }
 /*MEDIA QUERIES*/
  @media screen and (min-width: 601px) {
