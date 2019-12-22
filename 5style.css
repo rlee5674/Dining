@@ -15,9 +15,39 @@
    position: relative;
 
 }
+h1{
+  font-family: 'Hind', sans-serif;
+}
+#subtitle{
+ font-family: ''Barlow Condensed'', sans-serif;
+}
 img{
   max-width:100%;
 
+}
+h2{
+  
+  display: inline;
+  font-family: 'Hind', sans-serif;
+  font-size: 30px;
+
+}
+#mini-hero{
+   text-align: left;
+}
+#mission2{
+   text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  font-family: 'Hind', sans-serif;
+}
+#mission{
+  padding-left: 20vh;
+  padding-right: 20vh;
+   text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-family: ''Barlow Condensed'', sans-serif;
 }
 #over0, #over1, #over2, #over3, #over4{
     background-color: #000;
